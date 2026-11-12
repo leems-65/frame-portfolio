@@ -364,6 +364,200 @@ header{height:78px;position:relative;z-index:30;border-bottom:1px solid #ffffff2
   line-height: 1.8;
   word-break: keep-all;
 }
+/* =============================================
+   MOBILE / TABLET RESPONSIVE FIX
+   Desktop styles stay unchanged (<= 690px only).
+   ============================================= */
+@media (max-width: 690px) {
+  :root { --pad: clamp(18px, 5vw, 26px); }
+
+  /* 1. Header: keep logo on one line, move all nav links into row 2. */
+  header {
+    height: auto;
+    min-height: 112px;
+    padding: 15px var(--pad) 13px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    row-gap: 16px;
+  }
+  header .logo {
+    display: inline-flex;
+    width: max-content;
+    max-width: 100%;
+    min-width: 0;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+    font-size: clamp(14px, 3.9vw, 17px);
+    line-height: 1.1;
+    letter-spacing: -0.055em;
+  }
+  header .logo-icon { width: 19px; height: 19px; }
+  header .logo em { font-size: inherit; white-space: nowrap; }
+  header .nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 8px;
+    min-width: 0;
+    white-space: nowrap;
+    font-size: clamp(8px, 2.35vw, 10px);
+    letter-spacing: .09em;
+  }
+  header .nav a,
+  header .nav a:first-child,
+  header .nav a:nth-child(2) {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  header .nav a:last-child {
+    padding: 8px 10px;
+    border-radius: 100px;
+  }
+
+  /* 2. Opening section: same typography and visual rhythm, sized for phone. */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 35px;
+    min-height: auto;
+    padding: 48px var(--pad) 60px;
+  }
+  .hero-left { min-width: 0; align-self: auto; }
+  .hero h1 {
+    font-size: clamp(66px, 18.3vw, 104px);
+    line-height: .82;
+    letter-spacing: -.115em;
+    margin: 29px 0 27px;
+    transform: translateX(-3px);
+    white-space: nowrap;
+  }
+  .hero-blurb {
+    max-width: 100%;
+    font-size: clamp(13px, 3.4vw, 15px);
+    line-height: 1.85;
+  }
+  .hero-meta {
+    margin-top: 33px;
+    padding-top: 17px;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-meta small { font-size: 9px; line-height: 1.6; letter-spacing: .07em; }
+  .scroll-hint { flex-shrink: 0; gap: 7px; font-size: 8px; letter-spacing: .055em; }
+  .scroll-hint .arrow { width: 31px; height: 31px; font-size: 15px; }
+  .hero-film { width: 100%; min-height: 0; align-self: auto; }
+  .reel-media { aspect-ratio: 4/5; max-height: none; }
+  .reel-media video { transform: scale(1.08); }
+  .reel-top { left: 13px; right: 13px; top: 13px; font-size: 8px; }
+  .reel-bottom { left: 16px; right: 16px; bottom: 17px; }
+  .reel-bottom b { font-size: clamp(18px, 5vw, 24px); }
+  .reel-bottom small { font-size: 8px; }
+  .round-play { width: 54px; height: 54px; }
+
+  /* 3. Selected work: swipeable thumbnails, no squeeze or overflow. */
+  .section { padding: 74px var(--pad); }
+  .section-head { display: block; }
+  .section h2 { font-size: clamp(45px, 13vw, 75px); }
+  .section-desc { margin-top: 17px; font-size: 12px; }
+  .filters { gap: 6px; }
+  .filter { padding: 8px 10px; font-size: 9px; letter-spacing: .055em; }
+  .rail {
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .project-card { flex: 0 0 min(79vw, 410px); }
+  .project-meta { padding-top: 14px; }
+  .project-meta h3 { font-size: clamp(19px, 5vw, 25px); }
+  .project-meta p { font-size: 10px; }
+  .work-bottom { margin-top: 8px; }
+  .circle-arrow { width: 40px; height: 40px; }
+
+  /* 4. Profile: photo then readable information, no clipped long text. */
+  .breakdown {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 74px var(--pad);
+    gap: 34px;
+  }
+  .breakdown-picture { min-height: 0; aspect-ratio: 4/5; }
+  .breakdown h2 {
+    font-size: clamp(40px, 11vw, 65px);
+    line-height: .99;
+    margin: 24px 0 27px;
+  }
+  .breakdown-right { min-width: 0; }
+  .portfolio-specs { grid-template-columns: 1fr; gap: 22px; }
+  .specs-tools { grid-column: auto; }
+
+  /* 5. Style: four original cards per category, stacked for legibility. */
+  .process { padding: 84px var(--pad); }
+  .process .process-group-heading { width: 100%; text-align: center; }
+  .process .process-group-heading h3 {
+    font-size: clamp(19px, 5.5vw, 26px);
+    line-height: 1.25;
+  }
+  .steps { grid-template-columns: 1fr; margin-top: 27px; row-gap: 0; }
+  .step,
+  .step:nth-child(2) {
+    min-height: 0;
+    margin: 0;
+    padding: 20px 0 24px;
+    border-right: 0;
+    border-bottom: 1px solid #424443;
+  }
+  .step h3 { margin: 23px 0 9px; font-size: 24px; }
+  .step p { max-width: 100%; font-size: 13px; }
+
+  /* 6. Contact: keep the large desktop-like headline within screen. */
+  .contact { padding: 76px var(--pad) 34px; }
+  .contact h2 {
+    font-size: clamp(49px, 12.6vw, 81px);
+    line-height: .91;
+    letter-spacing: -.09em;
+    white-space: normal;
+    margin: 34px 0 57px;
+  }
+  .contact h2 .contact-trigger { max-width: 100%; white-space: normal; }
+  .footer-meta { flex-wrap: wrap; gap: 13px; line-height: 1.6; }
+  .contact-popup-content { padding: 30px 24px; }
+  .contact-popup-row { grid-template-columns: 1fr; gap: 8px; }
+  .contact-popup-content h2 { font-size: clamp(43px, 12vw, 65px); }
+}
+
+/* Very narrow devices (320px): preserve links and content without overlap. */
+@media (max-width: 360px) {
+  header .nav { font-size: 8px; gap: 5px; letter-spacing: .04em; }
+  header .nav a:last-child { padding: 7px 8px; }
+  .hero h1 { font-size: 65px; }
+  .hero-meta small { font-size: 8px; }
+  .scroll-hint { font-size: 7px; }
+  .filter { padding: 8px 7px; font-size: 8px; }
+  .contact h2 { font-size: 45px; }
+}
+
+/* Narrow tablets: avoid the original desktop header wrapping at ~700px. */
+@media (min-width: 691px) and (max-width: 730px) {
+  header {
+    height: auto;
+    min-height: 110px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+  }
+  header .logo { width: max-content; white-space: nowrap; font-size: 18px; }
+  header .nav { width: 100%; justify-content: space-between; gap: 12px; }
+}
+
 </style>
 </head>
 <body>
