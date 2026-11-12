@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c0d0e">
+<meta name="description" content="영상 편집자와 모션 디자이너를 위한 시네마틱 포트폴리오 샘플. 개인 작품과 정보로 교체해 사용하세요.">
+<title>Lee Min Sang / PORTFOLIO — Video Editor & Designer</title>
+
+<style>
+:root{--bg:#0c0d0e;--ink:#f1f1ed;--muted:#9d9e9c;--line:#333536;--panel:#151719;--accent:#dddcd4;--pad:clamp(22px,4.2vw,74px)}
+*,*:before,*:after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:4px}::selection{background:#c7c8c1;color:#111}body:before{content:"";pointer-events:none;position:fixed;z-index:99;inset:0;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.2' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#000;padding:12px;z-index:100}.skip:focus{left:10px}
+header{height:78px;position:relative;z-index:30;border-bottom:1px solid #ffffff25;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad)}.logo{display:flex;align-items:center;gap:14px;letter-spacing:-.055em;font-weight:900;font-size:21px}.logo-icon{width:23px;height:23px;display:block;flex-shrink:0}.logo em{font-style:normal;color:inherit;font-weight:inherit;font-size:inherit;letter-spacing:inherit}.nav{display:flex;align-items:center;gap:29px;font-size:10px;letter-spacing:.19em;font-weight:700}.nav a{color:#c6c6c3;transition:color .2s}.nav a:hover{color:#fff}.nav a:last-child{border:1px solid #777;padding:12px 17px;border-radius:100px;color:#eee}.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#b4b5b2}.line-label{display:flex;align-items:center;gap:12px}.line-label:before{content:"";width:27px;height:1px;background:#8a8b88}
+.hero{min-height:680px;min-height:calc(100svh - 78px);padding:clamp(50px,7vh,95px) var(--pad) 38px;display:grid;grid-template-columns:minmax(0,.97fr) minmax(0,1.03fr);gap:clamp(22px,5vw,85px);align-items:center;position:relative}.hero-left{align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;min-width:0}.hero h1{font-size:clamp(79px,9.3vw,173px);letter-spacing:-.115em;line-height:.79;margin:34px 0 32px;font-weight:850;white-space:nowrap;transform:translateX(-7px)}.hero h1 .hero-word{display:block;font-family:inherit;font-weight:850}
+/* CUT / FEEL: independent geometric punctuation, exactly square before rounding.
+   Match the #777 period next to THE WORK in section 02. */
+.hero h1 .hero-dot{display:inline-block;width:.135em;height:.135em;aspect-ratio:1/1;border-radius:50%;background:#777;vertical-align:baseline;margin-left:.055em;transform:translateY(-.012em);letter-spacing:normal}
+/* CREATE: identical font and weight to CUT/FEEL, but only the original white outline. */
+.hero h1 .outline{-webkit-text-stroke:1px var(--ink);color:transparent;font-weight:850}
+.hero h1 .outline .hero-dot{background:transparent;border:1px solid var(--ink)}.hero-blurb{max-width:430px;font-size:clamp(14px,1.35vw,18px);font-weight:350;line-height:1.85;color:#bcbdb9;word-break:keep-all}.hero-meta{margin-top:60px;display:flex;justify-content:space-between;align-items:end;gap:12px;border-top:1px solid var(--line);padding-top:20px}.hero-meta small{font-size:10px;line-height:1.9;letter-spacing:.11em;color:#b5b6b1}.scroll-hint{font-size:10px;letter-spacing:.14em;display:flex;gap:9px;align-items:center;color:#bdbdb7}.scroll-hint .arrow{display:grid;place-items:center;width:35px;height:35px;border:1px solid #666;border-radius:50%;font-size:17px}
+.hero-film{width:100%;align-self:stretch;min-height:485px;position:relative;display:flex;flex-direction:column;justify-content:center}.reel-media{width:100%;aspect-ratio:4/5;max-height:76vh;position:relative;overflow:hidden;background:#202123;border:1px solid #5d5e5a}.reel-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#090b0cbb 0%,transparent 38%);pointer-events:none}.reel-media video{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);transform:scale(1.2)}.reel-top{position:absolute;z-index:1;left:23px;right:23px;top:21px;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.17em}.reel-bottom{position:absolute;z-index:2;left:28px;right:28px;bottom:27px;display:flex;align-items:end;justify-content:space-between;gap:12px}.reel-bottom b{font-size:clamp(18px,2.2vw,36px);font-weight:700;letter-spacing:-.04em;line-height:1.04}.reel-bottom small{display:block;margin-top:10px;letter-spacing:.17em;font-size:9px;color:#d0d0cb}.round-play{flex-shrink:0;border-radius:50%;width:72px;height:72px;display:grid;place-items:center;background:#eeeeea;color:#141515;border:0;font-size:24px;transition:transform .2s,background .2s}.round-play:hover{transform:scale(1.07);background:white}.film-border{position:absolute;z-index:3;left:-17px;top:17%;width:31px;height:66%;border:1px solid #d3d4cf7e;pointer-events:none}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);min-height:62px;display:flex;align-items:center;justify-content:space-around;gap:16px;flex-wrap:wrap;padding:12px 24px;color:#92938f;font-size:10px;letter-spacing:.13em}.ticker span b{color:#d7d8d2;font-weight:500}
+.section{padding:100px var(--pad)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:33px}.section-no{font-size:11px;color:#b4b4af;letter-spacing:.17em}.section h2{font-size:clamp(42px,6.25vw,100px);letter-spacing:-.08em;line-height:.92;margin:14px 0 0;font-weight:720}.section-desc{font-size:13px;color:#999;line-height:1.8;max-width:330px;word-break:keep-all}
+.work-section{padding-bottom:80px}.filters{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:26px}.filter{border:1px solid #3d3f3e;background:transparent;color:#a7a8a5;padding:9px 15px;font-size:10px;letter-spacing:.13em;border-radius:100px;transition:background .2s,color .2s}.filter.on,.filter:hover{background:#e7e7e1;color:#171818;border-color:#e7e7e1}.rail-wrap{position:relative}.rail{display:flex;gap:20px;overflow:auto;scroll-snap-type:none;scrollbar-width:none;overscroll-behavior-inline:contain;padding:2px 2px 12px}.rail::-webkit-scrollbar{display:none}.project-card{flex:0 0 min(51vw,640px);min-width:0;scroll-snap-align:start;text-align:left;background:transparent;border:0;color:inherit;padding:0}.project-card[hidden]{display:none}.project-image{aspect-ratio:1.55;overflow:hidden;position:relative;background:#222;border:1px solid #494949;cursor:pointer}.project-image img{width:100%;height:100%;display:block;object-fit:cover;filter:grayscale(1) brightness(.92);transition:transform .8s cubic-bezier(.2,.75,.2,1),filter .5s}.project-card:hover img{transform:scale(1.065);filter:grayscale(.6) brightness(1.08)}.img-tag{position:absolute;top:17px;right:16px;border:1px solid #ffffff70;border-radius:30px;color:#fff;padding:7px 10px;font-size:9px;letter-spacing:.12em;background:#0005}.image-arrow{position:absolute;bottom:18px;right:19px;font-size:22px;width:44px;height:44px;border-radius:50%;border:1px solid #fff9;display:grid;place-items:center;color:#fff;background:#0007}.project-meta{display:flex;align-items:start;justify-content:space-between;padding:19px 1px;gap:10px}.project-meta h3{margin:0 0 7px;font-weight:640;font-size:clamp(21px,2vw,33px);letter-spacing:-.055em}.project-meta p{color:#a7a8a4;margin:0;font-size:11px;letter-spacing:.04em}.project-meta .n{color:#9c9d98;font-size:11px;letter-spacing:.12em}.work-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:15px}.rail-progress{height:2px;flex:1;background:#464845;max-width:380px;position:relative}.rail-progress span{display:block;background:#eaeae5;height:100%;width:25%;transition:width .2s}.arrow-controls{display:flex;gap:7px}.circle-arrow{display:grid;place-items:center;width:45px;height:45px;border:1px solid #555;border-radius:100%;background:transparent;color:#e9e9e4;font-size:18px;transition:background .2s,color .2s}.circle-arrow:hover{background:#eaeae5;color:#141414}
+.breakdown{padding:80px var(--pad);display:grid;grid-template-columns:1.07fr .93fr;gap:clamp(35px,7vw,115px);background:#e7e7e1;color:#151515}.breakdown-picture{min-height:530px;position:relative;overflow:hidden;background:#303132}.breakdown-picture img{display:block;width:100%;height:100%;object-fit:cover;}.breakdown-picture .picture-label{position:absolute;left:20px;bottom:20px;background:#151515;color:white;padding:10px 13px;font-size:10px;letter-spacing:.12em}.breakdown-right{display:flex;flex-direction:column;justify-content:center}.breakdown .eyebrow{color:#53534f}.breakdown h2{font-size:clamp(42px,5.3vw,88px);letter-spacing:-.08em;line-height:.95;margin:30px 0;max-width:650px}.breakdown p{font-size:15px;line-height:1.9;max-width:550px;color:#4d4e4c;word-break:keep-all}.breakdown-list{margin-top:38px;border-top:1px solid #a6a8a1}.breakdown-row{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid #a6a8a1;align-items:start;font-size:12px}.breakdown-row b{min-width:92px;font-weight:650}.breakdown-row span{color:#555}.text-link{display:inline-flex;gap:13px;align-items:center;justify-content:space-between;margin-top:33px;width:max-content;max-width:100%;border-bottom:1px solid;padding:0 0 12px;letter-spacing:.13em;font-size:11px;font-weight:700;cursor:pointer;background:none;color:inherit;border-top:0;border-left:0;border-right:0}
+.process{padding-top:120px;padding-bottom:120px}.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #4c4e4c;margin-top:45px}.step{min-height:230px;border-right:1px solid #424443;padding:22px 25px 10px 0;margin-right:20px}.step:last-child{border-right:0}.step small{display:block;color:#aaa;font-size:11px;letter-spacing:.17em}.step h3{margin:74px 0 12px;letter-spacing:-.06em;font-size:26px}.step p{color:#aaa;line-height:1.7;font-size:12px;word-break:keep-all;max-width:230px}
+.contact{padding:80px var(--pad) 38px;border-top:1px solid #3d3f3d}.contact h2{font-size:clamp(62px,11vw,174px);line-height:.86;letter-spacing:-.105em;margin:35px 0 65px;white-space:nowrap}.contact h2 a:hover{color:#c6c7c2}.footer-meta{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid #4a4c4b;padding-top:23px;color:#989a96;font-size:10px;letter-spacing:.12em}.footer-meta a{color:#efefeb}
+.modal{position:fixed;z-index:80;inset:0;background:#000c;display:none;align-items:center;justify-content:center;padding:25px;backdrop-filter:blur(14px)}.modal.open{display:flex}.modal-dialog{background:#181a1b;color:var(--ink);border:1px solid #4a4d4b;position:relative;width:min(980px,100%);max-height:calc(100svh - 50px);overflow:auto}.modal-close{z-index:2;position:absolute;right:14px;top:14px;width:45px;height:45px;background:#101010dc;color:#f1f1ed;border:1px solid #858582;border-radius:50%;font-size:21px}.modal-media{width:100%;aspect-ratio:16/9;background:#050505;overflow:hidden}.modal-media video{width:100%;height:100%;object-fit:contain;display:block}.modal-copy{padding:25px 31px 32px}.modal-copy .overline{font-size:11px;color:#b9b9b4;letter-spacing:.15em}.modal-copy h2{font-size:clamp(33px,5vw,62px);letter-spacing:-.06em;margin:0 0 18px}.modal-copy p{font-size:14px;line-height:1.8;color:#bcbdb9;max-width:720px}.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;border-top:1px solid #4a4c4a;margin-top:25px;padding-top:23px;font-size:12px}.modal-grid b{display:block;font-size:10px;letter-spacing:.16em;color:#898b88;margin-bottom:9px}.modal-grid span{line-height:1.6;display:block}
+@media(max-width:1000px){.hero{grid-template-columns:.91fr 1.09fr;min-height:675px}.hero h1{font-size:clamp(72px,10vw,120px)}.reel-media{max-height:600px}.breakdown-picture{min-height:450px}.steps{grid-template-columns:repeat(2,1fr);row-gap:20px}.step:nth-child(2){border-right:0}}
+@media(max-width:690px){header{height:68px}.logo{font-size:18px}.logo em{font-size:inherit}.nav{gap:14px;font-size:9px}.nav a:nth-child(2){display:none}.nav a:last-child{padding:9px 11px}.hero{display:flex;flex-direction:column;min-height:auto;padding:65px var(--pad) 32px;align-items:stretch;gap:38px}.hero-left{align-self:auto}.hero h1{font-size:clamp(67px,15vw,112px);margin:32px 0 26px}.hero-blurb{font-size:14px}.hero-meta{margin-top:32px}.hero-film{min-height:auto}.reel-media{aspect-ratio:1.22;max-height:none}.reel-media video{transform:scale(1.12)}.round-play{width:56px;height:56px;font-size:20px}.reel-bottom b{font-size:24px}.film-border{display:none}.section{padding:70px var(--pad)}.section-head{display:block}.section-desc{margin-top:20px}.project-card{flex-basis:min(86vw,500px)}.breakdown{grid-template-columns:1fr;padding:60px var(--pad);gap:30px}.breakdown-picture{min-height:350px}.breakdown h2{margin-top:20px}.steps{gap:0}.step{margin-right:8px;padding-right:12px}.step h3{font-size:21px}.process{padding:85px var(--pad)}.contact h2{font-size:clamp(55px,12vw,104px)}.footer-meta{flex-wrap:wrap}.modal{padding:10px}.modal-dialog{max-height:calc(100svh - 20px)}.modal-copy{padding:20px}.modal-media{aspect-ratio:16/9}.modal-grid{grid-template-columns:1fr}}
+@media(max-width:400px){.nav a:first-child{display:none}.hero h1{font-size:17vw}.ticker{justify-content:flex-start}.contact h2{font-size:12vw}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+#modal-desc {
+  white-space: pre-line;
+}
+/* 2페이지 개인정보 줄 간격 */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+/* TOOLS / EDUCATION / LICENSE 전체 영역 */
+
+.portfolio-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 22px;
+  margin-top: 35px;
+}
+
+/* 개별 항목 디자인 */
+.specs-box {
+  border-top: 1px solid #a6a8a1;
+  padding-top: 18px;
+  min-width: 0;
+}
+
+/* TOOLS를 첫 줄 전체 너비로 배치 */
+.specs-tools {
+  grid-column: 1 / -1;
+}
+
+/* 항목 제목 */
+.specs-box h3 {
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  color: #151515;
+
+  margin: 0 0 20px;
+  padding-left: 10px;
+  border-left: 3px solid #151515;
+}
+
+/* TOOLS 설명 */
+.breakdown .specs-tools p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* EDUCATION / LICENSE 목록 */
+.specs-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 각 목록 간격 */
+.specs-box li {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 13px;
+  word-break: keep-all;
+}
+
+/* EDUCATION 날짜 */
+.specs-box li span {
+  display: block;
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 3px;
+}
+
+/* 모바일에서는 세로 정렬 */
+@media (max-width: 690px) {
+  .portfolio-specs {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .specs-tools {
+    grid-column: auto;
+  }
+}
+/* 유튜브 링크 영역 */
+.youtube-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0 20px;
+}
+
+/* 유튜브 로고 버튼 */
+.youtube-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 60px;
+  flex-shrink: 0;
+
+  background: #262728;
+  border: 1px solid #555;
+  border-radius: 12px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* 마우스를 올렸을 때 */
+.youtube-link:hover {
+  background: #393B3C;
+  border-color: #E7E7E1;
+  transform: translateY(-3px);
+}
+
+/* 키보드 선택 표시 */
+.youtube-link:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 3px;
+}
+
+/* 로고 크기 */
+.youtube-link svg {
+  width: 42px;
+  height: 31px;
+  display: block;
+}
+
+/* 유튜브 로고 색상: 밝은 회색 */
+.youtube-link svg rect {
+  fill: #E7E7E1;
+}
+
+/* 재생 삼각형 색상: 검정 */
+.youtube-link svg path {
+  fill: #181A1B;
+}
+/* 04 / CONTACT 배경과 글자 색상 */
+
+.contact {
+  background: #e7e7e1;
+  color: #151515;
+  border-top: 1px solid #a6a8a1;
+}
+
+/* 04 / CONTACT 작은 제목 */
+.contact .eyebrow {
+  color: #53534f;
+}
+
+/* 클릭할 수 있는 큰 타이포그래피 */
+.contact h2 .contact-trigger {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: #151515;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* 마우스 호버 효과 */
+.contact h2 .contact-trigger:hover {
+  color: #53534f;
+}
+
+/* 키보드 포커스 */
+.contact h2 .contact-trigger:focus-visible {
+  outline: 2px solid #151515;
+  outline-offset: 6px;
+}
+
+/* 맨 아래 구분선과 글자 */
+.contact .footer-meta {
+  border-top: 1px solid #a6a8a1;
+  color: #555653;
+}
+
+.contact .footer-meta a {
+  color: #151515;
+}
+/* 연락처 팝업 기본 설정 */
+
+.contact-popup[hidden] {
+  display: none;
+}
+
+.contact-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+/* 팝업 박스 */
+
+.contact-popup-content {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: calc(100svh - 40px);
+  overflow-y: auto;
+
+  padding: clamp(26px, 5vw, 48px);
+  background: #e7e7e1;
+  color: #151515;
+
+  border: 1px solid #a6a8a1;
+  box-shadow: 0 30px 85px #0007;
+}
+
+/* X 닫기 버튼 */
+
+.contact-popup-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 42px;
+  height: 42px;
+  border: 1px solid #777;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #151515;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.contact-popup-close:hover {
+  background: #151515;
+  color: #e7e7e1;
+}
+
+/* 작은 CONTACT 글자 */
+
+.contact-popup-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #555;
+}
+
+/* 큰 타이틀 */
+
+.contact-popup-content h2 {
+  margin: 27px 0 25px;
+
+  font-size: clamp(42px, 7vw, 70px);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+}
+
+/* 전화번호, 이메일 줄 */
+
+.contact-popup-row {
+  display: grid;
+  grid-template-columns: 95px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+
+  padding: 21px 0;
+  border-top: 1px solid #a6a8a1;
+}
+
+.contact-popup-row:last-child {
+  border-bottom: 1px solid #a6a8a1;
+}
+
+.contact-popup-row span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.contact-popup-row a {
+  color: #151515;
+  font-size: clamp(15px, 2.2vw, 20px);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.contact-popup-row a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* 모바일 화면 */
+
+@media (max-width: 480px) {
+  .contact-popup-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+/* 제목 영역 가운데 배치 */
+.process .process-group-heading > div {
+  width: 100%;
+  text-align: center;
+}
+
+/* PLANNING / FILMING / EDITING 제목 */
+.process .process-group-heading h3 {
+  text-align: center;
+  margin: 10px 0 0;
+}
+
+/* 제목 아래 설명 */
+.process .process-group-heading p {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">작품 바로가기</a>
+<header><a href="#top" class="logo" aria-label="Lee Min Sang / PORTFOLIO 홈"><svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M22 7H7V22 M42 7H57V22 M57 42V57H42 M22 57H7V42" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="square"/><circle cx="32" cy="32" r="2.6" fill="currentColor"/></svg>Lee Min Sang<span aria-hidden="true">/</span><em>PORTFOLIO</em></a><nav class="nav" aria-label="주 메뉴"><a href="#work">WORK</a>
+<a href="#profile">PROFILE</a>
+<a href="#style">STYLE</a>
+<a href="#contact">LET'S TALK ↗</a></nav></header>
+<main id="top">
+<section class="hero" aria-label="소개 및 쇼릴">
+  <div class="hero-left">
+    <div><div class="eyebrow line-label">VIDEO EDITOR &amp; DESIGNER</div><h1 aria-label="CUT. CREATE. FEEL."><span class="hero-word">CUT<span class="hero-dot" aria-hidden="true"></span></span><span class="hero-word outline">CREATE<span class="hero-dot" aria-hidden="true"></span></span><span class="hero-word">FEEL<span class="hero-dot" aria-hidden="true"></span></span></h1><p class="hero-blurb">장면의 리듬을 편집하고 움직임으로 감정을 설계합니다.<br>기획부터 촬영 및 편집, 모션그래픽까지 화면의 모든 프레임에 의미를 담습니다.</p></div>
+    <div class="hero-meta"><small>SELECTED WORKS / 2026<br>FILMING × EDITORIAL × MOTION DESIGN</small><a href="#work" class="scroll-hint"><span>SCROLL TO EXPLORE</span><span class="arrow">↓</span></a></div>
+  </div>
+  <div class="hero-film"><div class="film-border"></div><div class="reel-media"><video id="reel" src="assets/showreelport-1.mp4" poster="assets/work-film.jpg" autoplay muted playsinline loop preload="metadata" aria-label="샘플 모션 쇼릴, 실제 작품으로 교체하세요"></video><div class="reel-top"><span>FRAME / 0001</span><span>DEMO SHOWREEL</span></div><div class="reel-bottom"><div><b>EVERY FRAME<br>HAS A PURPOSE.</b><small>SHOWREEL / ORIGINAL DEMO FOOTAGE</small></div><button class="round-play" id="watch-reel" type="button" aria-label="쇼릴 크게 보기">▶</button></div></div></div>
+</section>
+<div class="ticker" aria-label="전문 영역"><span>01 <b>FILM</b></span><span>02 <b>EDIT</b></span><span>03 <b>MOTION GRAPHICS</b></span><span>04 <b>AI Contents </b></span></div>
+<section class="section work-section" id="work"><div class="section-head"><div><span class="section-no">01 / SELECTED WORK</span><h2>THE WORK<span style="color:#777">.</span></h2></div><p class="section-desc">6개 작품을 좌우로 탐색하고 클릭하면 영상, 제목, 간단한 설명을 확인할 수 있어요.</p></div>
+<div class="filters" role="group" aria-label="프로젝트 카테고리"><button class="filter on" data-filter="all" aria-pressed="true">ALL PROJECTS <span>06</span></button><button class="filter" data-filter="editing" aria-pressed="false">FILMING &amp; EDITING</button><button class="filter" data-filter="motion" aria-pressed="false">AI</button></div>
+<div class="rail-wrap"><div class="rail" id="rail" tabindex="0" aria-label="가로로 움직이는 프로젝트 목록">
+<button class="project-card" data-project="0" data-type="editing"><div class="project-image"><img src="assets/wportf-1.jpg" alt="고립 은둔 청년 지원 사업" loading="lazy"><span class="img-tag">FILMING &amp; EDITING - 02:32</span><span class="image-arrow" aria-hidden="true">↗</span></div><div class="project-meta"><div><h3>빈_칸 제작 인터뷰</h3><p>Planning / Filming / Editing</p></div><span class="n">01 / 06</span></div></button>
+<button class="project-card" data-project="1" data-type="motion"><div class="project-image"><img src="assets/wportf-2.jpg" alt="시그널 시티 밤 풍경" loading="lazy"><span class="img-tag">AI - 01:52</span><span class="image-arrow" aria-hidden="true">↗</span></div><div class="project-meta"><div><h3>시그널 시티</h3><p>Planning / Source Production / Editing</p></div><span class="n">02 / 06</span></div></button>
+<button class="project-card" data-project="2" data-type="motion"><div class="project-image"><img src="assets/wportf-3.jpg" alt="해양안전 5가지" loading="lazy"><span class="img-tag">AI - 01:10</span><span class="image-arrow" aria-hidden="true">↗</span></div><div class="project-meta"><div><h3>SAFE 5 : 해양안전 5가지</h3><p>Planning / Source Production / Editing</p></div><span class="n">03 / 06</span></div></button>
+<button class="project-card" data-project="3" data-type="motion"><div class="project-image"><img src="assets/wportf-4.jpg" alt="술 잔을 든 어부" loading="lazy"><span class="img-tag">AI - 01:30</span><span class="image-arrow" aria-hidden="true">↗</span></div><div class="project-meta"><div><h3>한 잔의 무게</h3><p>Planning / Editing</p></div><span class="n">04 / 06</span></div></button>
+<button class="project-card" data-project="4" data-type="motion"><div class="project-image"><img src="assets/wportf-5.jpg" alt="소시지를 먹으려 하고 있는 여성" loading="lazy"><span class="img-tag">AI - 00:30</span><span class="image-arrow" aria-hidden="true">↗</span></div><div class="project-meta"><div><h3>고단백 소시지</h3><p>Planning / Source Production / Editing</p></div><span class="n">05 / 06</span></div></button>
+<button class="project-card" data-project="5" data-type="editing"><div class="project-image"><img src="assets/wportf-6.jpg" alt="체육 영재 선발 대회 타이포" loading="lazy"><span class="img-tag">EDITING - 01:51</span><span class="image-arrow" aria-hidden="true">↗</span></div><div class="project-meta"><div><h3>슬라이드쇼</h3><p>Editing / Motion Graphics</p></div><span class="n">06 / 06</span></div></button>
+</div><div class="work-bottom"><div style="display:flex;align-items:center;gap:15px"><span class="eyebrow" id="rail-count">01 — 06</span><div class="rail-progress"><span id="rail-progress"></span></div></div><div class="arrow-controls"><button class="circle-arrow" type="button" id="prev" aria-label="이전 작품">←</button><button class="circle-arrow" type="button" id="next" aria-label="다음 작품">→</button></div></div></div>
+</section>
+<section class="breakdown" id="profile"><div class="breakdown-picture"><img src="assets/work-motion.png" alt="모션 디자인 작업을 구성하는 타이포그래피 디자인" loading="lazy"><span class="picture-label">Lee Min Sang</span></div><div class="breakdown-right"><span class="eyebrow">02 / PROFILE</span><h2>GOOD EDITING<br>IS INVISIBLE .<br>GREAT MOTION<br>IS FELT.</h2><div class="profile-info">
+
+  <div class="profile-item">
+    <span>NAME.</span>
+    <strong> 이민상</strong>
+  </div>
+
+  <div class="profile-item">
+    <span>EMAIL.</span>
+    <a href="mailto:largemiddlesmall@naver.com">
+       largemiddlesmall@naver.com
+    </a>
+  </div>
+
+</div>
+<!-- TOOLS / EDUCATION / LICENSE -->
+
+<div class="portfolio-specs">
+
+  <!-- 01. TOOLS -->
+  <div class="specs-box specs-tools">
+    <h3>TOOLS</h3>
+
+    <p>
+      Premiere Pro · After Effects · Higgsfield
+    </p>
+  </div>
+
+  <!-- 02. EDUCATION -->
+  <div class="specs-box">
+    <h3>EDUCATION</h3>
+
+    <ul>
+      <li>
+        <span>2025.02</span>
+        비전대학교 방송영상디자인과 졸업
+      </li>
+
+      <li>
+        <span>2026.09</span>
+        JB - Nexcon 생성형 AI 콘텐츠 기획 이수
+      </li>
+
+      <li>
+        <span>2026.10 - 11</span>
+        (주)인포커스 인턴
+      </li>
+    </ul>
+  </div>
+
+  <!-- 03. LICENSE -->
+  <div class="specs-box">
+    <h3>LICENSE</h3>
+
+    <ul>
+      <li>GTQI</li>
+      <li>ITQ 한글</li>
+      <li>ITQ 파워포인트</li>
+      <li>ACA 프리미어 프로</li>
+      <li>SMAT 경영자격 3급</li>
+    </ul>
+  </div>
+
+</div></div></div></section>
+<section class="section process" id="style"><div class="section-head"><div><span class="section-no">03 / STYLE</span><h2>FROM IDEA<br>TO IMPACT<span style="color:#777">.</span></h2></div><p class="section-desc">영상 편집자와 모션 디자이너의 문제 해결 과정이 보이도록 기획·편집·디자인·마무리를 구분해 보여줘요.</p></div><!-- 01 / PLANNING -->
+<div class="process-group">
+  <div class="process-group-heading">
+    <div>
+      <span class="process-kicker">01 / PLANNING</span>
+      <h3>THINK BEFORE THE FRAME.</h3>
+    </div>
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <small>01 / MESSAGE</small>
+      <h3>Make it matter</h3>
+      <p>영상의 목적과 핵심 메시지를 한 문장으로 압축해
+      전달의 방향을 선명하게 정합니다.</p>
+    </div>
+
+    <div class="step">
+      <small>02 / AUDIENCE</small>
+      <h3>Know the viewer</h3>
+      <p>시청자의 관심과 시청 환경을 분석해
+      첫 순간부터 시선을 붙잡는 접근법을 찾습니다.</p>
+    </div>
+
+    <div class="step">
+      <small>03 / STORYBOARD</small>
+      <h3>Build the story</h3>
+      <p>콘티와 스토리보드로 장면의 흐름을 시각화해
+      아이디어를 구체적인 화면으로 바꿉니다.</p>
+    </div>
+
+    <div class="step">
+      <small>04 / PRE-PRODUCTION</small>
+      <h3>Prepare to create</h3>
+      <p>촬영 일정, 장소, 장비와 동선을 점검해
+      완성도 높은 컷에 집중할 수 있도록 준비합니다.</p>
+   </div>
+  </div>
+
+  </div><!-- 02 / FILMING -->
+<div class="process-group" style="margin-top: 64px;">
+  <div class="process-group-heading">
+    <div>
+      <span class="process-kicker">02 / FILMING</span>
+      <h3>MAKE EVERY SHOT COUNT.</h3>
+    </div>
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <small>01 / COMPOSITION</small>
+      <h3>Frame the meaning</h3>
+      <p>인물과 공간의 관계를 고려한 구도로
+      한 장면에 전달해야 할 의미를 담습니다.</p>
+    </div>
+
+    <div class="step">
+      <small>02 / LIGHTING</small>
+      <h3>Shape the mood</h3>
+      <p>빛의 방향과 명암 대비를 조절해
+      장면의 분위기와 감정을 선명하게 보여줍니다.</p>
+    </div>
+
+    <div class="step">
+      <small>03 / CAMERA</small>
+      <h3>Move with purpose</h3>
+      <p>카메라의 움직임과 시점을 목적에 맞춰 설계해
+      시청자의 몰입을 자연스럽게 이끕니다.</p>
+    </div>
+
+    <div class="step">
+      <small>04 / ON-SET</small>
+      <h3>Capture the moment</h3>
+      <p>현장 연출과 디테일을 점검하며
+      편집에서 살아날 순간을 놓치지 않고 확보합니다.</p>
+    </div>
+  </div>
+</div><!-- 03 / EDITING & FINISHING -->
+<div class="process-group-heading" style="margin-top:64px;">
+  <div>
+    <span class="process-kicker">
+      03 / EDITING & FINISHING
+    </span>
+    <h3>FIND THE RIGHT RHYTHM.</h3>
+  </div>
+</div>
+</div><div class="steps"><div class="step"><small>01 / DISCOVER</small><h3>Understand</h3><p>목적, 톤 앤 매너, 타깃을 파악하고 영상의 핵심 메시지를 정합니다.</p></div><div class="step"><small>02 / EDIT</small><h3>Find the rhythm</h3><p>컷의 길이, 음악과 호흡, 이야기의 흐름을 설계합니다.</p></div><div class="step"><small>03 / DESIGN</small><h3>Give it motion</h3><p>타이포그래피, 그래픽, 합성 요소를 통해 장면의 에너지를 높입니다.</p></div><div class="step"><small>04 / DELIVER</small><h3>Refine every frame</h3><p>컬러, 사운드, 자막, 다양한 화면 비율을 고려해 완성합니다.</p></div></div></section>
+
+<!-- 04 / CONTACT 페이지 -->
+
+<section class="contact" id="contact">
+
+  <span class="eyebrow">
+    04 / CONTACT
+  </span>
+
+  <h2>
+    <button
+      class="contact-trigger"
+      id="open-contact"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="contact-popup"
+    >
+      LET'S MAKE<br>
+      IT MOVE ↗
+    </button>
+  </h2>
+
+  <div class="footer-meta">
+
+    <span>
+      © 2026 Lee Min Sang / PORTFOLIO
+    </span>
+
+    <span>
+      VIDEO EDITOR / DESIGNER
+    </span>
+
+    <a href="#top">
+      BACK TO TOP ↑
+    </a>
+
+  </div>
+
+</section>
+</main>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true"><div class="modal-dialog" role="document"><button class="modal-close" type="button" id="close-modal" aria-label="닫기">×</button><div class="modal-media" id="modal-media"></div><div class="modal-copy"><h2 id="modal-title"></h2><p id="modal-desc"></p></div></div></div>
+<!-- 04 / CONTACT 연락처 팝업 -->
+
+<div
+  class="contact-popup"
+  id="contact-popup"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="contact-popup-title"
+  hidden
+>
+
+  <div class="contact-popup-content">
+
+    <!-- 닫기 버튼 -->
+    <button
+      class="contact-popup-close"
+      id="close-contact"
+      type="button"
+      aria-label="연락처 팝업 닫기"
+    >
+      ×
+    </button>
+
+    <span class="contact-popup-kicker">
+      04 / CONTACT
+    </span>
+
+    <h2 id="contact-popup-title">
+      CONNECT.
+    </h2>
+
+    <!-- 이메일 -->
+    <div class="contact-popup-row">
+
+      <span>EMAIL</span>
+
+      <a href="mailto:largemiddlesmall@naver.com">
+        largemiddlesmall@naver.com
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+// 각 작품은 영상 경로, 제목, 짧은 설명 세 가지만 수정하면 됩니다.
+// 첫 화면의 작품 썸네일 이미지는 원래 디자인 그대로 유지합니다.
+// 아래 6개 작품의 video / title / desc 값을 본인 작업으로 바꾸세요.
+// assets/project-01.mp4 ~ project-06.mp4 파일을 같은 이름으로 교체하면 코드를 바꾸지 않고 영상 교체도 가능합니다.
+const works=[
+  {
+  video: 'assets/portf-1.mp4',
+  title: '빈_칸 제작 인터뷰',
+
+  desc: '청년이 만드는 고립 안전 홍보 프로젝트. - [빈_칸] 시리즈는 유튜브에서 시청할 수 있습니다.\n\nPremiere Pro 90% / After Effect 10%',
+
+  youtubeLinks: [
+    'https://www.youtube.com/watch?v=8WiqxEOlG3I',
+    'https://www.youtube.com/watch?v=VPeGv1iT-No'
+  ]
+},
+  {video:'assets/portf-2.mp4',title:'시그널 시티',desc:'생활 속 전자파 바로 알기 공모전 출품작.\n\nPremiere Pro 10% / ChatGPT 50% / Higgsfield 30% / Suno AI 10%'},
+  {video:'assets/portf-3.mp4',title:'SAFE 5 : 함께 지키는 해양안전',desc:'해양안전 콘텐츠 공모전 AI 숏폼 정보전달 애니메이션.\n\nPremiere Pro 10% / ChatGPT 50% / Higgsfield 30% / Suno AI 10%'},
+  {video:'assets/portf-4.mp4',title:'한 잔의 무게',desc:'해양안전 콘텐츠 공모전 AI 숏폼 실사화 안전사고 홍보영상.\n\nPremiere Pro 10% / ChatGPT 40% / Higgsfield 40% / Suno AI 10%'},
+  {video:'assets/portf-5.mp4',title:'고단백 소시지',desc:'고단백 소시지 제품 AI 숏폼 홍보 영상.\n\nPremiere Pro 10% / ChatGPT 50%/ Higgsfield 40%'},
+  {video:'assets/portf-6.mp4',title:'슬라이드쇼',desc:'제 6회 체육 영재 선발 대회 슬라이드쇼.\n\nPremiere Pro 70% / After Effect 30%'}
+];
+const rail=$('#rail'),progress=$('#rail-progress');let filter='all';
+function visibleCards(){return $$('.project-card').filter(e=>!e.hidden)}
+function updateRail(){let max=Math.max(1,rail.scrollWidth-rail.clientWidth);progress.style.width=Math.min(100,Math.max(20,20+80*(rail.scrollLeft/max)))+'%';let a=visibleCards(),idx=0;for(let i=0;i<a.length;i++)if(a[i].offsetLeft-rail.offsetLeft<=rail.scrollLeft+80)idx=i;$('#rail-count').textContent=String(idx+1).padStart(2,'0')+' — '+String(a.length).padStart(2,'0')}
+rail.addEventListener('scroll',updateRail,{passive:true});window.addEventListener('resize',updateRail);updateRail();
+function moveRail(step){let a=visibleCards();if(!a.length)return;let w=a[0].getBoundingClientRect().width+20;rail.scrollBy({left:w*step,behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'})}
+$('#next').addEventListener('click',()=>moveRail(1));$('#prev').addEventListener('click',()=>moveRail(-1));
+/* THE WORK - 마우스 휠 횡스크롤 */
+
+const horizontalRail = document.querySelector('#rail');
+
+if (horizontalRail) {
+
+  horizontalRail.addEventListener('wheel', function(e) {
+
+    // 가로 스크롤 가능한 최대 거리
+    const maxScroll =
+      horizontalRail.scrollWidth -
+      horizontalRail.clientWidth;
+
+    if (maxScroll <= 0) return;
+
+    // 세로 마우스 휠과 트랙패드 가로 입력 지원
+    const delta =
+      Math.abs(e.deltaY) >= Math.abs(e.deltaX)
+        ? e.deltaY
+        : e.deltaX;
+
+    if (delta === 0) return;
+
+    // 현재 가로 스크롤 위치
+    const current = horizontalRail.scrollLeft;
+
+    // 끝에 도달하면 일반 세로 스크롤 허용
+    const canMove =
+      (delta > 0 && current < maxScroll - 1) ||
+      (delta < 0 && current > 1);
+
+    if (!canMove) return;
+
+    // 페이지 세로 스크롤 방지
+    e.preventDefault();
+
+    // 휠 움직임에 따라 가로 이동
+    horizontalRail.scrollLeft = Math.max(
+      0,
+      Math.min(maxScroll, current + delta * 1.3)
+    );
+
+  }, { passive: false });
+
+}
+$$('.filter').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;$$('.filter').forEach(b=>{let on=b===button;b.classList.toggle('on',on);b.setAttribute('aria-pressed',String(on))});$$('.project-card').forEach(card=>{card.hidden=!(filter==='all'||card.dataset.type===filter)});rail.scrollLeft=0;requestAnimationFrame(updateRail)}));
+const modal=$('#modal'),media=$('#modal-media');let previousFocus=null;
+// 상세 팝업에는 영상 + 제목 + 간단한 설명만 표시합니다.
+// 작품 카드 이미지(기존 디자인)는 영상의 포스터로 사용됩니다.
+function showVideoDetail({video,title,desc,poster,youtubeLinks=[]}){
+  previousFocus=document.activeElement;
+  media.replaceChildren();
+  const player=document.createElement('video');
+  player.src=video;
+  if(poster) player.poster=poster;
+  player.controls=true;
+  player.playsInline=true;
+  player.preload='metadata';
+  player.setAttribute('aria-label',title+' 영상');
+  media.appendChild(player);
+  $('#modal-title').textContent=title;
+  // 설명 영역 가져오기
+const descBox = document.querySelector('#modal-desc');
+descBox.replaceChildren();
+
+// 기존 설명을 문단으로 분리
+const parts = desc.split('\n\n');
+
+// 첫 번째 설명 표시
+const firstText = document.createElement('span');
+firstText.textContent = parts.shift() || '';
+descBox.appendChild(firstText);
+
+// 유튜브 링크가 있는 작품에만 로고 표시
+if (youtubeLinks.length > 0) {
+
+  const linksBox = document.createElement('span');
+  linksBox.className = 'youtube-links';
+
+  youtubeLinks.forEach((url, index) => {
+
+    const link = document.createElement('a');
+
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.className = 'youtube-link';
+
+    link.title = `유튜브 영상 ${index + 1} 보기`;
+    link.setAttribute(
+      'aria-label',
+      `유튜브 영상 ${index + 1} 새 탭에서 열기`
+    );
+
+    // 유튜브 로고 SVG
+    link.innerHTML = `
+      <svg viewBox="0 0 32 23" aria-hidden="true">
+        <rect
+          x="1" y="1"
+          width="30" height="21"
+          rx="6"
+          fill="#FF0033"
+        />
+        <path
+          d="M13 6.5 L22 11.5 L13 16.5 Z"
+          fill="#FFFFFF"
+        />
+      </svg>
+    `;
+
+    linksBox.appendChild(link);
+
+  });
+
+  descBox.appendChild(linksBox);
+}
+
+// 나머지 설명과 사용 프로그램 표시
+if (parts.length > 0) {
+
+  const lastText = document.createElement('span');
+
+  lastText.style.display = 'block';
+  lastText.style.marginTop =
+    youtubeLinks.length > 0 ? '0' : '12px';
+
+  lastText.textContent = parts.join('\n\n');
+
+  descBox.appendChild(lastText);
+}
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  $('#close-modal').focus();
+}
+function openModal(n){
+  const data=works[n];
+  const card=$('.project-card[data-project="'+n+'"]');
+  const poster=card?.querySelector('img')?.getAttribute('src')||'';
+  showVideoDetail({...data,poster});
+}
+function closeModal(){media.innerHTML='';modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';if(previousFocus)previousFocus.focus()}
+$$('.project-card').forEach(card=>{const i=+card.dataset.project;card.querySelector('h3').textContent=works[i].title;card.addEventListener('click',()=>openModal(i))});
+$('#close-modal').addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();if(e.key==='Tab'&&modal.classList.contains('open')){const focusable=[...modal.querySelectorAll('button')];if(focusable.length){e.preventDefault();focusable[0].focus()}}});
+const reel=$('#reel');if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){reel.pause();reel.removeAttribute('autoplay')}
+$('#watch-reel').addEventListener('click',()=>{showVideoDetail({video:'assets/showreelport-1.mp4',poster:'assets/work-film.jpg',title:'A demo in motion.',desc:'쇼릴 샘플 영상입니다. 본인의 대표 작업을 담은 영상으로 교체하세요.'});reel.pause()});
+const originalClose=closeModal;$('#close-modal').addEventListener('click',()=>{if(reel.paused&&!window.matchMedia('(prefers-reduced-motion:reduce)').matches)reel.play().catch(()=>{})});
+
+// 04 / CONTACT 팝업 제어
+
+const contactTrigger =
+  document.querySelector('#open-contact');
+
+const contactPopup =
+  document.querySelector('#contact-popup');
+
+const contactClose =
+  document.querySelector('#close-contact');
+
+let contactPreviousFocus = null;
+let contactPreviousOverflow = '';
+
+// 팝업 열기
+function openContactPopup() {
+  contactPreviousFocus = document.activeElement;
+  contactPreviousOverflow = document.body.style.overflow;
+
+  contactPopup.hidden = false;
+  document.body.style.overflow = 'hidden';
+  contactClose.focus();
+}
+
+// 팝업 닫기
+function closeContactPopup() {
+  contactPopup.hidden = true;
+  document.body.style.overflow = contactPreviousOverflow;
+
+  if (contactPreviousFocus) {
+    contactPreviousFocus.focus();
+  }
+}
+
+// 큰 타이틀 클릭
+contactTrigger.addEventListener(
+  'click',
+  openContactPopup
+);
+
+// X 버튼 클릭
+contactClose.addEventListener(
+  'click',
+  closeContactPopup
+);
+
+// 팝업 바깥 클릭
+contactPopup.addEventListener('click', (event) => {
+  if (event.target === contactPopup) {
+    closeContactPopup();
+  }
+});
+
+// ESC로 닫기, 키보드 포커스를 팝업 안에 유지
+document.addEventListener('keydown', (event) => {
+  if (contactPopup.hidden) return;
+
+  if (event.key === 'Escape') {
+    closeContactPopup();
+    return;
+  }
+
+  if (event.key === 'Tab') {
+    const items = [
+      ...contactPopup.querySelectorAll('button, a[href]')
+    ];
+
+    const first = items[0];
+    const last = items[items.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (
+      !event.shiftKey &&
+      document.activeElement === last
+    ) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+});
+</script>
+</body>
+</html>
